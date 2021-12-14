@@ -77,7 +77,7 @@ class CupertinoSettingsItemState extends State<CupertinoSettingsItem> {
     final isLargeScreen = MediaQuery.of(context).size.width >= 768;
 
     final ThemeData theme = Theme.of(context);
-    final ListTileTheme tileTheme = ListTileTheme.of(context);
+    final ListTileThemeData tileTheme = ListTileTheme.of(context);
 
     final iconThemeData = IconThemeData(
       color: widget.enabled
@@ -318,7 +318,7 @@ class CupertinoSettingsItemState extends State<CupertinoSettingsItem> {
               ? iosPressedTileColorDark
               : iosTileDarkColor;
 
-  Color? _iconColor(ThemeData theme, ListTileTheme tileTheme) {
+  Color? _iconColor(ThemeData theme, ListTileThemeData tileTheme) {
     if (tileTheme.selectedColor != null) {
       return tileTheme.selectedColor;
     }
